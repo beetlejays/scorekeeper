@@ -1,4 +1,4 @@
-export const playersArray = [
+export const PlayersArray = [
   "Mike Meyers",
   "Jim Jingle",
   "Jenny Jam",
