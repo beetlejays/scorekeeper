@@ -7,7 +7,7 @@ import PlayerForm from "./components/PlayerForm/PlayerForm";
 function App() {
   return (
     <div className="App">
-      <main class="scorekeeper-container">
+      <main className="scorekeeper-container">
         <ul className="player-list" role="list">
           <Player name="John Doe" score={30} />
           <Player name="Jane Doe" score={23} />
