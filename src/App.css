@@ -1,21 +1,21 @@
 .App {
   display: grid;
   gap: 20px;
-  max-width: 800px;
   margin: 0 auto;
   height: 100vh;
 }
 
 .scorekeeper-container {
   margin: auto;
-  border: 3px solid goldenrod;
+  border: 3px solid #ccc;
   border-radius: 15px;
   padding: 2rem;
   display: grid;
+  max-width: 500px;
+  background-color: white;
 }
 
 .player-list {
   list-style-type: none;
   font-size: 1.3rem;
-  padding: 1rem 0;
 }

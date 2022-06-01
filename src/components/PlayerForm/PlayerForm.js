@@ -6,7 +6,7 @@ export default function PlayerForm() {
       <label htmlFor="Add Player"></label>
       <h2>Add Player</h2>
       <input type="text"></input>
-      <button>Add</button>
+      <button className="Button">Add</button>
     </form>
   );
 }
