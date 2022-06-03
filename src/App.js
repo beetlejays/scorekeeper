@@ -1,23 +1,27 @@
 import "./App.css";
-
+import { useState } from "react";
 import Button from "./components/Button/Button";
 import Player from "./components/Player/Player";
 import PlayerForm from "./components/PlayerForm/PlayerForm";
 
 function App() {
-  const players = ["Mike Meyers", "Jim Jingle", "Jenny Jam", "Susanne Suarez"];
+  const [players, setPlayers] = useState([]);
+
+  function createPlayer(player) {
+    setPlayers([...players, player]);
+  }
 
   return (
     <div className="App">
       <main className="scorekeeper-container">
         <ul className="player-list">
           {players.map((player) => (
-            <Player name={player} score={30} />
+            <Player key={player.name} name={player.name} score={player.score} />
           ))}
         </ul>
         <Button text="Reset scores" />
         <Button text="Reset all" />
-        <PlayerForm />
+        <PlayerForm onCreatePlayer={createPlayer} />
       </main>
     </div>
   );
