@@ -11,6 +11,14 @@ function App() {
     setPlayers([...players, player]);
   }
 
+  function increaseScore(index) {
+    setPlayers(player.score + 1);
+  }
+
+  function decreaseScore() {
+    setPlayers(player.score + 1);
+  }
+
   return (
     <div className="App">
       <main className="scorekeeper-container">
