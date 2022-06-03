@@ -1,5 +1,9 @@
 import "./Button.css";
 
-export default function Button({ text }) {
-  return <button className="Button">{text}</button>;
+export default function Button({ text, handleReset }) {
+  return (
+    <button onClick={handleReset} type="button" className="Button">
+      {text}
+    </button>
+  );
 }
