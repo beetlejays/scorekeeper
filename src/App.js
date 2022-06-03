@@ -1,5 +1,5 @@
 import "./App.css";
-import PlayersArray from "./data";
+
 import Button from "./components/Button/Button";
 import Player from "./components/Player/Player";
 import PlayerForm from "./components/PlayerForm/PlayerForm";
