@@ -1,3 +1,7 @@
 .Player {
   padding: 1rem 0;
 }
+
+.Player__name {
+  margin-right: auto;
+}
