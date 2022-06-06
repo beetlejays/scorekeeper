@@ -43,6 +43,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1 style={{ textAlign: "center", fontSize: "2.4rem" }}>
+        Scorekeeper App
+      </h1>
       <main className="scorekeeper-container">
         <ul className="player-list">
           {players.map((player, index) => (
