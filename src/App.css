@@ -11,7 +11,7 @@
   border-radius: 15px;
   padding: 2rem;
   display: grid;
-  max-width: 500px;
+  min-width: 300px;
   background-color: white;
 }
 
