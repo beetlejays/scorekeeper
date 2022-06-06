@@ -9,8 +9,13 @@ export default function Player({
   return (
     <li className="Player">
       <span className="Player__name"> {name} </span>{" "}
-      <button onClick={onDecreaseScore}>-</button> {score}{" "}
-      <button onClick={onIncreaseScore}>+</button>
+      <button className="button-add-subtract" onClick={onDecreaseScore}>
+        -
+      </button>{" "}
+      {score}{" "}
+      <button className="button-add-subtract" onClick={onIncreaseScore}>
+        +
+      </button>
     </li>
   );
 }

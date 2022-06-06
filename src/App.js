@@ -7,12 +7,15 @@ import PlayerForm from "./components/PlayerForm/PlayerForm";
 function App() {
   const [players, setPlayers] = useState([]);
 
+  function resetAllPlayers() {
+    setPlayers([]);
+  }
+
   function createPlayer(player) {
     setPlayers([...players, player]);
   }
 
   function resetScores() {
-    console.log("works");
     setPlayers(
       players.map((player) => {
         return { ...player, score: 0 };
@@ -40,6 +43,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1 style={{ textAlign: "center", fontSize: "2.4rem" }}>
+        Scorekeeper App
+      </h1>
       <main className="scorekeeper-container">
         <ul className="player-list">
           {players.map((player, index) => (
@@ -52,8 +58,8 @@ function App() {
             />
           ))}
         </ul>
-        <Button handleReset={resetScores} text="Reset scores" />
-        <Button text="Reset all" />
+        <Button onClick={resetScores} text="Reset scores" />
+        <Button onClick={resetAllPlayers} text="Reset all" />
         <PlayerForm onCreatePlayer={createPlayer} />
       </main>
     </div>
