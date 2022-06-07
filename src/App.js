@@ -1,11 +1,20 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "./components/Button/Button";
 import Player from "./components/Player/Player";
 import PlayerForm from "./components/PlayerForm/PlayerForm";
+import styled from "styled-components";
 
 function App() {
   const [players, setPlayers] = useState([]);
+
+  ///// useEffect here => set Items
+  useEffect(() => {
+    localStorage.setItem("players", JSON.stringify(players));
+  }, [players]);
+  ///// getItems
+  console.log(players);
+  /////
 
   function resetAllPlayers() {
     setPlayers([]);
@@ -58,8 +67,8 @@ function App() {
             />
           ))}
         </ul>
-        <Button onClick={resetScores} text="Reset scores" />
-        <Button onClick={resetAllPlayers} text="Reset all" />
+        <MainButton onClick={resetScores}>Reset scores</MainButton>
+        <MainButton onClick={resetAllPlayers}>Reset all Players</MainButton>
         <PlayerForm onCreatePlayer={createPlayer} />
       </main>
     </div>
@@ -67,3 +76,13 @@ function App() {
 }
 
 export default App;
+
+const MainButton = styled.button`
+  margin-bottom: 1rem;
+  border: none;
+  background-color: goldenrod;
+  color: white;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+`;
