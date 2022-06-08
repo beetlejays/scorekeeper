@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Player from "./components/Player/Player";
 import PlayerForm from "./components/PlayerForm/PlayerForm";
+import Heading from "./components/MainHeading/MainHeading";
 import styled from "styled-components";
 
 function App() {
@@ -57,9 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 style={{ textAlign: "center", fontSize: "2.4rem" }}>
-        Scorekeeper App
-      </h1>
+      <Heading text="Hello" />
       <main className="scorekeeper-container">
         <ul className="player-list">
           {players.map((player, index) => (
