@@ -5,9 +5,9 @@ import PlayerForm from "./components/PlayerForm/PlayerForm";
 import styled from "styled-components";
 
 function App() {
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(getFromLocal() ?? []);
 
-  /*   function getFromLocal() {
+  function getFromLocal() {
     try {
       const jsonString = localStorage.getItem("players");
       const data = JSON.parse(jsonString);
@@ -20,7 +20,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("players", JSON.stringify(players));
   }, [players]);
- */
 
   function resetAllPlayers() {
     setPlayers([]);
