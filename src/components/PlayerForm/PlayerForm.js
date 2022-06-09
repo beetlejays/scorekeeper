@@ -1,4 +1,3 @@
-import ButtonPrimary from "../MainButton/MainButton";
 import "./PlayerForm.css";
 
 export default function PlayerForm({ onCreatePlayer }) {
@@ -20,7 +19,7 @@ export default function PlayerForm({ onCreatePlayer }) {
       <h2>Add Player</h2>
       <label htmlFor="Name"></label>
       <input type="text" id="name" name="name" />
-      <ButtonPrimary text="Add Player" />
+      <button className="Button">Add Player</button>
     </form>
   );
 }

@@ -74,6 +74,7 @@ function App() {
         </ul>
         <ButtonPrimary onClick={resetScores} text="Reset scores" />
         <ButtonPrimary onClick={resetAllPlayers} text="Reset all Players" />
+
         <PlayerForm onCreatePlayer={createPlayer} />
       </main>
     </div>
