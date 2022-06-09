@@ -4,6 +4,7 @@ import Player from "./components/Player/Player";
 import PlayerForm from "./components/PlayerForm/PlayerForm";
 import Heading from "./components/MainHeading/MainHeading";
 import styled from "styled-components";
+import ButtonPrimary from "./components/MainButton/MainButton";
 
 function App() {
   const [players, setPlayers] = useState(getFromLocal() ?? []);
@@ -74,6 +75,8 @@ function App() {
         <MainButton onClick={resetScores}>Reset scores</MainButton>
         <MainButton onClick={resetAllPlayers}>Reset all Players</MainButton>
         <PlayerForm onCreatePlayer={createPlayer} />
+
+        <ButtonPrimary onClick="bla" text="Primary Button" />
       </main>
     </div>
   );
