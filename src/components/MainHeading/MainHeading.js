@@ -10,8 +10,9 @@ export default function MainHeading() {
 
 const Heading = styled.h1`
   margin-bottom: 1rem;
+  font-family: sans-serif;
   border: none;
-  color: white;
+  color: lightgrey;
   padding: 0.4rem 0;
   font-size: 3rem;
   text-align: center;

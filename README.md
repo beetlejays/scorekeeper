@@ -2,4 +2,4 @@
 
 ---
 
-This project is showcasing react components, useState and useEffect.
+This project is showcasing react components, useState, useEffect and storybook.
