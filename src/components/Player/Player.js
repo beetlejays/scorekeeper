@@ -1,4 +1,6 @@
 import "./Player.css";
+import "../MainButton/MainButton";
+import ButtonPrimary from "../MainButton/MainButton";
 
 export default function Player({
   name,
@@ -9,13 +11,10 @@ export default function Player({
   return (
     <li className="Player">
       <span className="Player__name"> {name} </span>{" "}
-      <button className="button-add-subtract" onClick={onDecreaseScore}>
-        -
-      </button>{" "}
-      {score}{" "}
-      <button className="button-add-subtract" onClick={onIncreaseScore}>
+      <ButtonPrimary onClick={onDecreaseScore}>-</ButtonPrimary> {score}{" "}
+      <ButtonPrimary className="button-add-subtract" onClick={onIncreaseScore}>
         +
-      </button>
+      </ButtonPrimary>
     </li>
   );
 }

@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div className="App">
-      <Heading text="Hello" />
+      <Heading />
       <main className="scorekeeper-container">
         <ul className="player-list">
           {players.map((player, index) => (
@@ -72,24 +72,12 @@ function App() {
             />
           ))}
         </ul>
-        <MainButton onClick={resetScores}>Reset scores</MainButton>
-        <MainButton onClick={resetAllPlayers}>Reset all Players</MainButton>
+        <ButtonPrimary onClick={resetScores} text="Reset scores" />
+        <ButtonPrimary onClick={resetAllPlayers} text="Reset all Players" />
         <PlayerForm onCreatePlayer={createPlayer} />
-
-        <ButtonPrimary onClick="bla" text="Primary Button" />
       </main>
     </div>
   );
 }
 
 export default App;
-
-const MainButton = styled.button`
-  margin-bottom: 1rem;
-  border: none;
-  background-color: goldenrod;
-  color: white;
-  padding: 0.4rem 0;
-  font-size: 1rem;
-  cursor: pointer;
-`;

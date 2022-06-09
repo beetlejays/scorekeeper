@@ -16,5 +16,6 @@ const Primary = styled.button`
   border-radius: 8px;
   border: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.3rem;
+  margin: 10px 0;
 `;
