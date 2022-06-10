@@ -61,6 +61,7 @@ function App() {
     <div className="App">
       <Heading />
       <main className="scorekeeper-container">
+        <PlayerForm onCreatePlayer={createPlayer} />
         <ul className="player-list">
           {players.map((player, index) => (
             <Player
@@ -74,8 +75,6 @@ function App() {
         </ul>
         <ButtonPrimary onClick={resetScores} text="Reset scores" />
         <ButtonPrimary onClick={resetAllPlayers} text="Reset all Players" />
-
-        <PlayerForm onCreatePlayer={createPlayer} />
       </main>
     </div>
   );

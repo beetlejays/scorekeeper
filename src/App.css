@@ -2,7 +2,7 @@
   display: grid;
   gap: 20px;
   margin: 0 auto;
-  height: 100vh;
+  height: 70vh;
 }
 
 .scorekeeper-container {
@@ -12,6 +12,8 @@
   padding: 2rem;
   display: grid;
   min-width: 300px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgb(139, 131, 239);
   background-color: white;
 }
 

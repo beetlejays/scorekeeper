@@ -11,7 +11,7 @@ export default function ButtonPrimary({ text, onClick }) {
 }
 
 const Primary = styled.button`
-  background-color: goldenrod;
+  background-color: #6d269e;
   padding: 0.5rem 1.6rem;
   border-radius: 8px;
   border: none;
